@@ -3,10 +3,10 @@ variable "project_id" {
   default = "arundat"
 }
 variable "name"{
-  type = (string)
+  type = string
 }
 variable "function_name" {
-  type = (string)
+  type = string
 }
 variable "region" {
 type = list(string) 
