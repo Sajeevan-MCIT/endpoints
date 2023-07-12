@@ -1,8 +1,10 @@
-variable "project_id" {
+variable "project" {
   type = string
+  default = "arundat"
 }
 variable "name"{
   type = string
+  default = 
 }
 variable "function_name" {
   type = string
