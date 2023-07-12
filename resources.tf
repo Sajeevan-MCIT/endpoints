@@ -1,16 +1,10 @@
-resource "google_compute_region_network_endpoint_group" "function_neg" {
-  name                  = "function_neg"
+resource "google_compute_region_network_endpoint_group" "neg" {
+  name                  = var.name
   network_endpoint_type = "SERVERLESS"
-  region                = "us-central1"
+  for_each = toset(var.region)
+  region = each.key
   cloud_function {
     function = var.function_name
   }
-}
-resource "google_compute_region_network_endpoint_group" "function_neg_2" {
-  name                  = "function_neg_2"
-  network_endpoint_type = "SERVERLESS"
-  region                = "northamerica-northeast1"
-  cloud_function {
-    function = var.function_name
-  }
+  project = var.project_id
 }
