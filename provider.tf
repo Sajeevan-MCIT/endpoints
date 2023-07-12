@@ -8,6 +8,6 @@ terraform {
 }
 
 provider "google" {
-  project     = "arundat"
-  region      = "us-central1"
+  project     = var.project_id
+  region      = var.region
 }
