@@ -8,7 +8,7 @@ variable "name"{
 }
 variable "function_name" {
   type = string
-  deafult = "sajfunctionname"
+  default = "sajfunctionname"
 }
 variable "region" {
 type = list(string) 
