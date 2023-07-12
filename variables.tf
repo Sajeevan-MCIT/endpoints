@@ -4,9 +4,11 @@ variable "project_id" {
 }
 variable "name"{
   type = string
+  default = "sajendpoint"
 }
 variable "function_name" {
   type = string
+  deafult = "sajfunctionname"
 }
 variable "region" {
 type = list(string) 
