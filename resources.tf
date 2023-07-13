@@ -20,6 +20,6 @@ resource "google_compute_backend_service" "backend-arun" {
   enable_cdn  = false
 
   backend {
-    group = google_compute_instance_group.neg.self_link
+    group = google_compute_region_network_endpoint_group.neg.self_link
   }
 }
